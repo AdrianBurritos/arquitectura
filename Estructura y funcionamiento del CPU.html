@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estructura y funcionamiento del CPU</title>
+<link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="mainwrapper">
+
+  <div id="content">
+    <div class="notOnDesktop"> 
+      <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+      <input type="text" placeholder="Search">
+    </div>
+    <section id="mainContent"> 
+      <!--************************************************************************
+    Main Blog content starts here
+    ****************************************************************************-->
+      <h1>Estructura y funcionamiento del CPU</h1>
+		<div id="bannerImage"><video src="images/unidad2.mp4" width="500" controls></video></div>
+	    <section id="2.1">
+	  <h2>2.2 Estructura de registros.</h2>
+      <p>Registro de datos: Un CPU puede funcionar con datos en uno de tres modos: entre dos registros, entre registros y una ubicación de Memoria de acceso al azar (RAM - Random-Access Memory) y entre dos ubicaciones RAM. Como el CPU está conectado directamente a los registros, las operaciones que implican dos registros son las más rápidas; las que se dan entre ubicaciones RAM son las más lentas.  Es decir, junta dos registros, añade un registro a una ubicación RAM, o añade dos ubicaciones RAM.</p>
+	  <p>Registro de datos: Un CPU puede funcionar con datos en uno de tres modos: entre dos registros, entre registros y una ubicación de Memoria de acceso al azar (RAM - Random-Access Memory) y entre dos ubicaciones RAM. Como el CPU está conectado directamente a los registros, las operaciones que implican dos registros son las más rápidas; las que se dan entre ubicaciones RAM son las más lentas.  Es decir, junta dos registros, añade un registro a una ubicación RAM, o añade dos ubicaciones RAM.</p>
+	  <p>Registro de índice: Un CPU no puede hacer matemáticas en registros de datos, aunque puede hacerlo indirectamente con un registro de índice. Éste trabaja con los registros de datos, permitiendo a un programa procesar hilos de información eficazmente.</p>
+		</section>
+		<section id="2.2.1">
+		<h2>2.2.1 Registros visibles al usuario</h2>
+		<p>Son aquellos que pueden ser referenciado por medio del lenguaje maquina que ejecuta la CPU, los registro que normalmente disponibles son:</p>
+		<p>Registros de propósito general, son aquellos que pueden guardar tanto datos como direcciones</p>
+		<p>Registro de datos, que pueden ser asignados por el programador a diversas funciones. En algunos casos son de propósito general y pueden ser empleados por cualquier instrucción de máquina que lleve a cabo operaciones sobre los datos.</p>
+		<p>Registros de direcciones, contienen direcciones en la memoria principal de datos y este tipo de registro puede ser de propósito general o estar a un modo específico de direccionamiento.</p>
+		<p>Códigos de condición, también conocidos como indicadores o flags. Los códigos de  condición, son bits activados por el procesador como resultado de determinadas operaciones</p>
+		</section>
+		<section id="2.2.2">
+		<h2>2.2.2 Registros de control y de estados.</h2>
+		<p>Se utilizan para controlar las operaciones del procesador, la mayor parte de estos registros no son visibles al usuario y algunos pueden ser accesibles a las instrucciones de maquina ejecutadas en un modo de control. Los registros utilizados son los siguientes:</p>
+
+
+		<p>Registro de direcciones de memoria (MAR), el cual contiene la dirección en donde se efectuará la próxima lectura o escritura de datos. El numero de direcciones depende del tamaño de la MAR.</p>
+		<p>Registro de datos de memoria (MBR), contiene los datos que van a ser escritos en la memoria o los que fueron leídos en ella.</p>
+		<p>Registro de direcciones de entrada y salida (I/O AR), especifica al dispositivo ya sea de entrada o salida</p>
+		<p>Registro de datos de entrada y salida (I/O BR), es una área temporal en donde se lleva a cabo el intercambio de datos entre el procesador y el dispositivo de entrada y salida que esta especificado en IOAR.</p>
+		<p>Registro de instrucciones (IR), contiene la dirección de la siguiente instrucción que se va a ejecutar. </p>
+		<p>Palabras de estado del programa (PSW), contiene códigos de condición junto con otras informaciones de estado como el signo, acarro, desbordamiento, entre otras.</p>
+	    </section>
+		<section id="2.2.3">
+		<h2>2.2.3 Ejemplos de registros de CPU reales.</h2>
+		<p>En algún diseño concreto de procesador es posible encontrar otros registros relativos a estado y control. Puede existir un puntero a un bloque de memoria que contenga información de estado adicional (por ejemplo, bloques de control de procesos). En las máquinas que usan interrupciones vectorizadas puede existir un registro de vector de interrupción. Si se utiliza una pila para llevar a cabo ciertas funciones (por ejemplo, llamada a subrutina), se necesita un puntero de pila del sistema. En un sistema de memoria virtual se usa un puntero a la tabla de páginas.</p>
+		</section>
+		<section id="2.3">
+		<h2>2.3 El ciclo de instrucción.</h2>
+		<p>Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de fetch-decode-execute en inglés) es el período que tarda la unidad central de proceso ( CPU) en ejecutar una instrucción de lenguaje máquina . Comprende una secuencia de acciones determinada que debe llevar a cabo la CPU para ejecutar cada instrucción en un programa.</p>
+		</section>
+		<section id="2.3.1">
+		<h2>2.3.1 Ciclo Fetch-Decode-Execute.</h2>
+		<p>Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de fetch-decode-execute en inglés) es el período que tarda la unidad central de proceso en ejecutar una instrucción de lenguaje máquina. Comprende una secuencia de acciones determinada que debe llevar a cabo la CPU para ejecutar cada instrucción en un programa.</p>
+		</section>
+		<section id="2.3.2">
+		<h2>2.3.2 Segmentación de instrucciones.</h2>
+		<p>La segmentación de instrucciones es una técnica que permite implementar el paralelismo a nivel de instrucción en un único procesador. La segmentación intenta tener ocupadas con instrucciones todas las partes del procesador dividiendo las instrucciones en una serie de pasos secuenciales que efectuarán distintas unidades de la CPU, tratando en paralelo diferentes partes de las instrucciones.</p>
+		</section>
+		<section id="2.3.3">
+		<h2>2.3.3 Conjunto de instrucciones. Características y funciones.</h2>
+		<p> Un conjunto de instrucciones, o una arquitectura de conjunto de instrucciones, es el conjunto colectivo de comandos que puede ejecutar un procesador de computadora. Todo lo que hace una computadora, desde ejecutar una aplicación de procesamiento de texto hasta codificar archivos de video, se puede reducir a una combinación de estos comandos</p>
+	  	<p>Las características que se pretende que tenga un conjunto de instrucciones son cuatro, principalmente:</p>
+		<p>Completo: que se pueda realizar en un tiempo finito cualquier tarea ejecutable con un ordenador (computable o decidible).</p>
+		<p>Eficiente: que permita alta velocidad de cálculo sin exigir una elevada complejidad en su UC y ALU y sin consumir excesivos recursos (memoria), es decir, debe cumplir su tarea en un tiempo razonable minimizando el uso de los recursos.</p>
+		<p>Autocontenidas: esto es, que contengan en sí mismas toda la información necesaria para ejecutarse.</p>
+	    <p>Independientes: que no dependan de la ejecución de alguna otra instrucción.</p>
+		</section>
+		<section id="2.3.4">
+		<h2>2.3.4 Modos de direccionamiento.</h2>
+		<p>Los llamados modos de direccionamiento son las diferentes maneras de especificar en informática un operando dentro de una instrucción. Cómo se especifican e interpretan las direcciones de memoria según las instrucciones. Un modo de direccionamiento especifica la forma de calcular la dirección de memoria efectiva de un operando mediante el uso de la información contenida en registros y / o constantes, contenida dentro de una instrucción de la máquina o en otra parte</p>
+		</section>
+		<section id="2.4">
+		<h2>2.4 Casos de estudio de CPU reales.</h2>
+		<p>Pueden emplearse registros para el control de operaciones de E/S. En el diseño de la organización de los registros de control y estado entran en juego varios factores. Una cuestión primordial es el soporte del sistema operativo. Algunos tipos de información de control son de utilidad específica para el sistema operativo. Si el diseñador del procesador posee una comprensión funcional del sistema operativo que se va a utilizar, la organización de los registros puede adaptarse hasta cierto punto a ese sistema operativo. Otra decisión importante en el diseño es la distribución de información de control entre registros y memoria. Es frecuente dedicar los primeros (más bajos) pocos cientos o miles de palabras de memoria para fines de control. El diseñador debe decidir cuánta información de control debiera estar en registros y cuánta en memoria. Se presenta el compromiso habitual entre coste y velocidad. </p>
+		</section>
+		
+    </section>
+    <section id="sidebar"> 
+      <!--************************************************************************
+    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+    ****************************************************************************-->
+      <nav>
+        <ul>
+          <li><a href="#2.2" title="Link">2.2 Estructuras de registro.</a></li>
+          <li><a href="#2.2.1" title="Link">2.2.1 Registros visibles al usuario</a></li>
+          <li><a href="#2.2.2" title="Link">2.2.2 Registros de control y de estados.</a></li>
+          <li><a href="#2.2.3" title="Link">2.2.3 Ejemplos de registros de CPU reales.</a></li>
+          <li><a href="#2.3" title="Link">2.3 El ciclo de instrucción.</a></li>
+          <li><a href="#2.3.1" title="Link">2.3.1 Ciclo Fetch-Decode-Execute.</a></li>
+		  <li><a href="#2.3.2" title="Link">2.3.2 Segmentación de instrucciones.</a></li>
+          <li><a href="#2.3.3" title="Link">2.3.3 Conjunto de instrucciones. Características y funciones.</a></li>
+          <li><a href="#2.3.4" title="Link">2.3.4 Modos de direccionamiento.</a></li>
+          <li><a href="#2.4" title="Link">2.4 Casos de estudio de CPU reales.</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+  <div id="footerbar"><!-- Small footerbar at the bottom --></div>
+</div>
+</body>
+</html>

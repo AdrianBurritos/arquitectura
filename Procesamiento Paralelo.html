@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procesamiento Paralelo.</title>
+<link href="BlogPostAssets/styles/blogPostStyle.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="mainwrapper">
+
+  <div id="content">
+    <div class="notOnDesktop"> 
+      <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+      <input type="text" placeholder="Search">
+    </div>
+    <section id="mainContent"> 
+      <!--************************************************************************
+    Main Blog content starts here
+    ****************************************************************************-->
+      <h1>Procesamiento Paralelo.</h1>
+      <div id="bannerImage"><video src="images/CPU.mp4" controls></video></div>
+	    <section id="4.1">
+	  <h2>4.1 Aspectos Básicos de la computación paralela.</h2>
+      <p>La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, operando sobre el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente (en paralelo). Hay varias formas diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, paralelismo de datos y paralelismo de tareas.</p>
+		</section>
+		<section id="4.2">
+		<h2>4.2 Tipos de computación paralela.</h2>
+			<p><h1>Paralelismo a nivel de bit:</h1></p>
+<p>Desde el advenimiento de la integración a gran escala (VLSI) como tecnología de fabricación de chips de computadora en la década de 1970 hasta alrededor de 1986, la aceleración en la arquitectura de computadores se lograba en gran medida duplicando el tamaño de la palabra en la computadora, la cantidad de información que el procesador puede manejar por ciclo.18​ El aumento del tamaño de la palabra reduce el número de instrucciones que el procesador debe ejecutar para realizar una operación en variables cuyos tamaños son mayores que la longitud de la palabra. Por ejemplo, cuando un procesador de 8 bits debe sumar dos enteros de 16 bits, el procesador primero debe adicionar los 8 bits de orden inferior de cada número entero con la instrucción de adición, a continuación, añadir los 8 bits de orden superior utilizando la instrucción de adición con acarreo que tiene en cuenta el bit de acarreo de la adición de orden inferior, en este caso un procesador de 8 bits requiere dos instrucciones para completar una sola operación, en donde un procesador de 16 bits necesita una sola instrucción para poder completarla.</p>
+		<p><h1>Paralelismo a nivel de instrucción:</h1></p>
+	  <p>Un programa de ordenador es, en esencia, una secuencia de instrucciones ejecutadas por un procesador. Estas instrucciones pueden reordenarse y combinarse en grupos que luego son ejecutadas en paralelo sin cambiar el resultado del programa. Esto se conoce como paralelismo a nivel de instrucción. Los avances en el paralelismo a nivel de instrucción dominaron la arquitectura de computadores desde mediados de 1980 hasta mediados de la década de 1990</p>
+	  <p><h1>Paralelismo de datos:</h1></p>
+	<p>El paralelismo de datos es el paralelismo inherente en programas con ciclos, que se centra en la distribución de los datos entre los diferentes nodos computacionales que deben tratarse en paralelo. «La paralelización de ciclos conduce a menudo a secuencias similares de operaciones —no necesariamente idénticas— o funciones que se realizan en los elementos de una gran estructura de datos». Muchas de las aplicaciones científicas y de ingeniería muestran paralelismo de datos.
+
+Una dependencia de terminación de ciclo es la dependencia de una iteración de un ciclo en la salida de una o más iteraciones anteriores. Las dependencias de terminación de ciclo evitan la paralelización de ciclos.</p>
+	<p><h1>Paralelismo de tareas:</h1></p>
+	<p>El paralelismo de tareas es la característica de un programa paralelo en la que «cálculos completamente diferentes se pueden realizar en cualquier conjunto igual o diferente de datos». Esto contrasta con el paralelismo de datos, donde se realiza el mismo cálculo en distintos o mismos grupos de datos. El paralelismo de tareas por lo general no escala con el tamaño de un problema</p>
+		</section>
+	    <section id="4.2.1">
+		<h2>4.2.1 Clasificación.</h2>
+		<p><h1>Computación multinúcleo:</h1></p>
+		<p>un procesador multinúcleo es un
+procesador que incluye múltiples unidades de ejecución
+(núcleos) en el mismo chip. Un procesador multinúcleo puede
+ejecutar múltiples instrucciones por ciclo de secuencias de
+instrucciones múltiples.</p>
+		<p><h1>Multiprocesamiento simétrico:</h1></p>
+		<p>un multiprocesador simétrico
+(SMP) es un sistema computacional con múltiples
+procesadores idénticos que comparten memoria y se conectan
+a través de un bus. La contención del bus previene el escalado
+de esta arquitectura.</p>
+		<p><h1>Computación en clúster:</h1></p>
+		<p>un clúster es un grupo de
+ordenadores débilmente acoplados que trabajan en estrecha
+colaboración, de modo que en algunos aspectos pueden
+considerarse como un solo equipo.</p>
+		<p><h1>Procesamiento paralelo masivo:</h1></p>
+		<p>tienden a ser más grandes
+que los clústeres, con «mucho más» de 100 procesadores. En
+un MPP, cada CPU tiene su propia memoria y una copia del
+sistema operativo y la aplicación.</p>
+		<p><h1>Computación distribuida:</h1></p>
+		<p>la computación distribuida es la
+forma más distribuida de la computación paralela. Se hace uso
+de ordenadores que se comunican a través de la Internet para
+trabajar en un problema dado.</p>
+		<p><h1>Computadoras paralelas especializadas:</h1></p>
+		<p>dentro de la
+computación paralela, existen dispositivos paralelos
+especializados que generan interés. Aunque no son específicos
+para un dominio, tienden a ser aplicables sólo a unas pocas
+clases de problemas paralelos.</p>
+		<p><h1>Cómputo reconfigurable con arreglos de compuertas programables:</h1></p>
+		<p>el cómputo reconfigurable es el uso de un
+arreglo de compuertas programables (FPGA) como
+coprocesador de un ordenador de propósito general.</p>
+		<p><h1>Cómputo de propósito general en unidades de procesamiento gráfico (GPGPU):</h1></p>
+		<p>es una tendencia
+relativamente reciente en la investigación de ingeniería
+informática. Los GPUs son co-procesadores que han sido
+fuertemente optimizados para procesamiento de gráficos por
+computadora.</p>
+		<p><h1>Circuitos integrados de aplicación específica:</h1></p>
+		<p>debido a que
+un ASIC (por definición) es específico para una aplicación
+dada, puede ser completamente optimizado para esa
+aplicación. Como resultado, para una aplicación dada, un
+ASIC tiende a superar a un ordenador de propósito general.</p>
+		<p><h1>Procesadores vectoriales:</h1></p>
+		<p>pueden ejecutar la misma
+instrucción en grandes conjuntos de datos. Tienen operaciones
+de alto nivel que trabajan sobre arreglos lineales de números o
+vectores.</p>
+	    </section>
+		<section id="4.2.2">
+		<h2>4.2.2 Arquitectura de computadores secuenciales.</h2>
+		<p>A diferencia de los sistemas combinacionales, en los sistemas
+secuenciales, los valores de las salidas, en un momento dado, no
+dependen exclusivamente de los valores de las entradas en dicho
+momento, sino también dependen del estado anterior o estado
+interno. El sistema secuencial más simple es el biestable, de los
+cuales, el de tipo D (o cerrojo) es el más utilizado actualmente.
+El sistema secuencial requiere de la utilización de un dispositivo de
+memoria que pueda almacenar la historia pasada de sus entradas
+(denominadas variables de estado) y le permita mantener su estado
+durante algún tiempo, estos dispositivos de memoria pueden ser
+sencillos como un simple retardador o celdas de memoria de tipo
+DRAM, SRAM o multivibradores biestables también conocido
+como Flip-Flop.</p>
+		</section>
+		<section id="4.2.3">
+		<h2>4.2.3 Organización de direcciones de memoria</h2>
+		<p>La memoria principal en un ordenador en paralelo puede ser
+compartida —compartida entre todos los elementos de
+procesamiento en un único espacio de direcciones—, o distribuida
+—cada elemento de procesamiento tiene su propio espacio local de
+direcciones—. El término memoria distribuida se refiere al hecho de
+que la memoria se distribuye lógicamente, pero a menudo implica
+
+que también se distribuyen físicamente. La memoria distribuida-
+compartida y la virtualización de memoria combinan los dos
+
+enfoques, donde el procesador tiene su propia memoria local y
+permite acceso a la memoria de los procesadores que no son locales.
+Los accesos a la memoria local suelen ser más rápidos que los
+accesos a memoria no local.
+
+Las arquitecturas de ordenador en las que cada elemento de la
+memoria principal se puede acceder con igual latencia y ancho de
+banda son conocidas como arquitecturas de acceso uniforme a
+memoria (UMA). Típicamente, sólo se puede lograr con un sistema
+de memoria compartida, donde la memoria no está distribuida
+físicamente. Un sistema que no tiene esta propiedad se conoce como
+arquitectura de acceso a memoria no uniforme (NUMA). Los
+sistemas de memoria distribuidos tienen acceso no uniforme a la
+memoria.</p>
+		</section>
+		<section id="4.3">
+		<h2>4.3 Sistemas de memoria (compartida).Multiprocesadores.</h2>
+		<p>los sistemas de memoria compartida tradicionales SMP, utilizan un mismo espacio de memoria compartido entre todos
+los procesadores. La comunicacion entre la memoria y los procesadores generalmente se realiza mediante un bus, el cual puede llegar a suponer un cuello de
+botella en el acceso a memoria si el numero de procesadores es suficientemente
+alto. Las arquitecturas NUMA (Non-Uniform Memory Architecture) intentan
+aliviar este cuello de botella, acercando parte de la memoria a cada procesador,
+aunque esto deriva en que el acceso a la memoria remota es mas lento que el
+9
+acceso a la memoria local. Desafortunadamente, tanto los sistemas SMP como
+NUMA tienen un precio elevado, lo que motiva el uso de los sistemas distribuidos,
+relativamente m´as baratos. No obstante, todas las comunicaciones y sincronizaciones deben hacerse mediante el paso de mensajes, ya que cada sistema tiene
+su propia memoria local, separada del resto. En general resulta mas facil la programacion para sistemas con un solo procesador o sistemas multiprocesadores
+con un bloque de memoria compartida, que mediante el paso de mensajes, de
+ahı el nacimiento de los sistemas DSM (Distributed Shared Memory), que no es
+mas que una tecnica para simular un espacio comun de direcciones entre multicomputadores. Existen varias alternativas para conseguir simular este espacio
+com´un de direcciones a partir de la arquitectura de memoria distribuida, por
+ejemplo mediante el uso de caches, mas rapido y caro, mediante el uso de memoria virtual con modificaciones en el software, mas lento y barato, o tambien
+mediante soluciones hibridas entre hardware y software. Como es de esperar los
+sistemas DSM tambien plantean varios problemas que hay que tener en cuenta y
+para los cuales se proponen distintas soluciones, una vez mas el problema de la
+coherencia es uno de los principales focos de conflicto, aunque su estudio queda
+fuera del alcance de este documento.</p>
+		</section>
+		<section id="4.3.1">
+		<h2>4.3.1 Redes de interconexión dinámica (indirecta).</h2>
+		<p>Uno de los criterios más importantes para la clasificación de las redes es el que tiene en cuenta la situación de la red en la máquina paralela, dando lugar a dos familias de redes: redes estáticas y redes dinámicas. Una red estática es una red cuya topología queda definida de manera definitiva y estable durante la construcción de la máquina paralela.
+
+La red simplemente une los diversos elementos de acuerdo a una configuración dada. Se utiliza sobre todo en el caso de los multicomputadores para conectar los diversos procesadores que posee la máquina. Por la red sólo circulan los mensajes entre procesadores, por lo que se dice que la red presenta un acoplamiento débil. En general, en las redes estáticas se exige poca carga a la red.
+
+Una red dinámica es una red cuya topología puede variar durante el curso de la ejecución de un programa paralelo o entre dos ejecuciones de programas. La red está constituida por elementos materiales específicos, llamados commutadores o switches.
+
+Las redes dinámicas se utilizan sobre todo en los multiprocesadores. En este caso, la red une los procesadores a los bancos de memoria central. Cualquier acceso de un procesador a la memoria (bien sea para acceder a los datos o a las instrucciones) debe pasar a través de la red, por lo se dice que la red tiene un acoplamiento fuerte. La red debe poseer un rendimiento extremadamente bueno para no demorar demasiado a los procesadores que acceden a memoria.</p>
+		</section>
+		<section id="4.4">
+		<h2>4.4 Sistemas de memoria distribuida Multicomputadores.</h2>
+		<p>Los sistemas de memoria distribuida o multicomputadores pueden ser de dos tipos básicos. El primero de ellos consta de un único computador con múltiples CPUs comunicadas por un bus de datos, mientras que en el segundo se utilizan múltiples computadores, cada uno con su propio procesador, enlazados por una red de interconexión más o menos rápida. En el primer caso, se habla de procesadores masivamente paralelos (MPPs, Massively Parallel Processors), y en el segundo se conocen de una forma genérica como clusters.</p>
+		</section>
+		<section id="4.4.1">
+		<h2>4.4.1 Redes de interconexión estáticas</h2>
+		<p>Las redes estáticas emplean enlaces directos fijos entre los nodos. Estos enlaces, una vez fabricado el sistema, son difíciles de modificar, por lo que la escalabilidad de éstas topologías es baja. Las redes estáticas pueden utilizarse con eficiencia en los sistemas donde puede predecirse el tráfico de comunicaciones entre sus procesadores. Algunas redes de interconexión estáticas son:</p>
+			<p>Formación Lineal</p>
+			<p>Anillo/Anillo cordal</p>
+			<p>Mallas y toros</p>
+		</section>
+		<section id="4.5">
+		<h2>4.5 Casos para estudio</h2>
+		<p>Por numerosos motivos, el procesamiento distribuido se ha
+convertido en un área de gran importancia e interés dentro de la
+ciencia de la computación, produciendo profundas transformaciones
+en las líneas de investigación y desarrollo.
+Interesa realizar investigación en la especificación, transformación,
+optimización y evaluación de algoritmos distribuidos y paralelos.
+Esto incluye el diseño y desarrollo de sistemas paralelos, la
+transformación de algoritmos secuenciales en paralelos, y las
+métricas de evaluación de performance sobre distintas plataformas
+de soporte (hardware y software). Más allá de las mejoras constantes
+en las arquitecturas físicas de soporte, uno de los mayores desafíos
+se centra en cómo aprovechar al máximo la potencia de las mismas.</p>
+		</section>		
+		
+    </section>
+    <section id="sidebar"> 
+      <!--************************************************************************
+    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+    ****************************************************************************-->
+      <nav>
+        <ul>
+          <li><a href="#4.1" title="Link">4.1 Aspectos Básicos de la computación paralela.</a></li>
+          <li><a href="#4.2" title="Link">4.2 Tipos de computación paralela.</a></li>
+          <li><a href="#4.2.1" title="Link">4.2.1 Clasificacion</a></li>
+          <li><a href="#4.2.2" title="Link">4.2.2 Arquitectura de computadores secuenciales.</a></li>
+          <li><a href="#4.2.3" title="Link">4.2.3 Organización de direcciones de memoria</a></li>
+          <li><a href="#4.3" title="Link">4.3 Sistemas de memoria (compartida). Multiprocesadores</a></li>
+		  <li><a href="#4.3.1" title="Link">4.3.1 Redes de interconexión dinámica (indirecta).</a></li>
+          <li><a href="#4.4" title="Link">4.4 Sistemas de memoria distribuida Multicomputadores.</a></li>
+          <li><a href="#4.4.1" title="Link">4.4.1 Redes de interconexión estáticas</a></li>
+          <li><a href="#4.5" title="Link">4.5 Casos para estudio</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+  <div id="footerbar"><!-- Small footerbar at the bottom --></div>
+</div>
+</body>
+</html>
